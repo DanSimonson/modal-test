@@ -1,0 +1,843 @@
+$velocity-primary: #152457;
+$velocity-secondary-white: #ffffff;
+$velocity-font-white: rgba(255, 255, 255, 0.87);
+$velocity-button-white: #daecff;
+html,
+body {
+  width: 100%;
+  height: 100%;
+  zoom: 85%;
+}
+
+/**********************
+* Contact Modal 
+**********************/
+
+.modal-overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: 1040;
+  width: 100%;
+  height: 100%;
+  background-color: #000;
+  opacity: 0.5;
+}
+
+.modal-wrapper {
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: 1050;
+  width: 100%;
+  height: 100%;
+  overflow-x: hidden;
+  overflow-y: auto;
+  outline: 0;
+  color: $velocity-primary;
+}
+
+.modal {
+  z-index: 100;
+  background: white;
+  position: relative;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  height: 500px;
+  overflow-y: auto;
+  width: 35%;
+  border-radius: 3px;
+  color: $velocity-primary;
+  background-color: $velocity-font-white;
+  font-size: 1.4rem;
+  font-weight: 700;
+  line-height: 1;
+}
+
+.modal-header {
+  display: flex;
+  justify-content: flex-start;
+}
+
+.modal-close-button {
+  font-size: 1.4rem;
+  font-weight: 700;
+  line-height: 1;
+  cursor: pointer;
+  border: none;
+  color: #222;
+}
+.modal-close-button:focus {
+  outline: none;
+}
+
+button {
+  font-size: 0.9rem;
+  font-weight: 700;
+  border: none;
+  border-radius: 3px;
+  padding: 0.3rem 1rem;
+  margin-left: 0.5rem;
+}
+
+.renderStyle {
+  margin: 1.5rem 0 1.5rem 1.5rem;
+}
+
+.modal {
+  h6 {
+    margin: 0 0 1rem 0;
+    border-bottom: 1px solid $velocity-primary;
+    padding-left: 1.5rem;
+    padding-bottom: 0.5rem;
+    span {
+      margin-right: 5px;
+    }
+  }
+}
+
+/*********************
+* end Contact Modal
+*********************/
+
+/*********************
+* move crm Modal
+*********************/
+.modal-overlay-move {
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: 1040;
+  width: 100%;
+  height: 100%;
+  background-color: #000;
+  opacity: 0.5;
+}
+
+.modal-wrapper-move {
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: 1050;
+  width: 100%;
+  height: 100%;
+  overflow-x: hidden;
+  overflow-y: auto;
+  outline: 0;
+  color: $velocity-primary;
+}
+
+.modal-move {
+  z-index: 100;
+  background: white;
+  position: relative;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  height: 300px;
+  overflow-y: auto;
+  width: 50%;
+  border-radius: 3px;
+  color: $velocity-primary;
+  font-size: 1.4rem;
+  font-weight: 700;
+  line-height: 1;
+}
+
+.modal-header-move {
+  display: flex;
+  justify-content: flex-start;
+}
+
+.modal-close-button-move {
+  font-size: 1.4rem;
+  font-weight: 700;
+  line-height: 1;
+  cursor: pointer;
+  border: none;
+  color: #222;
+}
+.modal-close-button-move:focus {
+  outline: none;
+}
+
+button {
+  font-size: 0.9rem;
+  font-weight: 700;
+  border: none;
+  border-radius: 3px;
+  padding: 0.3rem 1rem;
+  margin-left: 0.5rem;
+}
+
+.renderStyle {
+  margin: 1.5rem 0 1.5rem 1.5rem;
+}
+
+.modal-move {
+  h6 {
+    margin: 0 0 1rem 0;
+    border-bottom: 1px solid $velocity-primary;
+    padding-left: 1.5rem;
+    padding-bottom: 0.5rem;
+    span {
+      margin-right: 5px;
+    }
+  }
+}
+
+.wrapperDiv {
+  margin: 12px;
+}
+
+.centerDiv {
+  margin: 20px auto 0 auto;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  .wrapperDiv {
+    h1 {
+      color: $velocity-primary;
+      margin-right: 50px;
+    }
+    .moveTxtfield {
+      width: 100px;
+    }
+  }
+}
+
+/*********************
+* end move crm Modal
+*********************/
+
+/****************************
+*   arrange items on card
+*****************************/
+
+.cardTitleTxt {
+  display: flex;
+}
+.cardTitleTxtOne {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  margin-right: 190px;
+}
+.cardTitleTextTwo {
+  display: flex;
+  flex-direction: row;
+  //justify-content: flex-end;
+}
+.mdc-checkbox {
+  margin-right: 11px;
+}
+.hide {
+  visibility: hidden;
+}
+
+/*********************************
+*   end arrange items on card
+**********************************/
+
+.navbar-above {
+  display: flex;
+  height: 100%;
+  width: 100%;
+  padding-top: 0 !important;
+  position: relative;
+
+  .footer-box {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: $velocity-primary;
+    height: 50px;
+    width: 100%;
+    position: absolute;
+    left: 0;
+    z-index: 1;
+    .footer-left {
+      margin-left: 25px;
+      flex-basis: 15%;
+    }
+    .footer-right {
+      margin-right: 25px;
+      flex-basis: 15%;
+    }
+    h5 {
+      display: inline;
+      color: $velocity-secondary-white;
+    }
+  }
+
+  .mdc-top-app-bar {
+    overflow: visible;
+    background-color: $velocity-primary;
+    .mdc-top-app-bar__title {
+      overflow: visible;
+    }
+  }
+
+  .topAppBar-box {
+    width: 100%;
+
+    .mdc-top-app-bar__section {
+      margin: 0;
+      padding: 0;
+
+      .mdc-top-app-bar__title {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        padding: 0;
+        width: 100%;
+        height: 100%;
+
+        .header-left {
+          margin-left: 24px;
+          flex-basis: 15%;
+          cursor: pointer;
+        }
+
+        .header-right {
+          display: flex;
+          align-items: center;
+          flex-basis: 15%;
+          width: 100%;
+          height: 100%;
+          font-size: 12px;
+          margin-top: 1%;
+          .country {
+            width: 5.5rem;
+            margin-left: 32px;
+            position: relative;
+            &:hover {
+              .country-content {
+                opacity: 1;
+                visibility: visible;
+              }
+            }
+
+            .country-content {
+              background-color: $velocity-primary;
+              color: $velocity-font-white;
+              position: absolute;
+              top: 15px;
+              padding: 10px 2.3rem 0 5px;
+              visibility: hidden;
+              opacity: 0;
+              transition: opacity 0.2s ease-in;
+
+              p {
+                cursor: pointer;
+              }
+            }
+            .mdc-button {
+              background-color: $velocity-primary;
+            }
+            .mdc-dropdown-list-container {
+              overflow: visible;
+            }
+          }
+
+          .preference {
+            margin-left: 32px;
+            position: relative;
+            &:hover {
+              .dropdown-content {
+                opacity: 1;
+                visibility: visible;
+              }
+            }
+
+            .dropdown-content {
+              background-color: $velocity-primary;
+              color: $velocity-font-white;
+              position: absolute;
+              right: -45px;
+              padding: 10px 2.3rem 0 5px;
+              visibility: hidden;
+              opacity: 0;
+              transition: opacity 0.2s ease-in;
+            }
+          }
+
+          .material-icons {
+            margin-top: -6px;
+            margin-left: 5px;
+            margin-right: 10px;
+          }
+        }
+      }
+    }
+  }
+
+  .sideBar-box {
+    display: flex;
+    flex-direction: column;
+    margin-left: 25px;
+    margin-top: 90px;
+    height: 90%;
+
+    .drawer-box {
+      height: 90%;
+      width: 100%;
+      margin-top: 36px;
+
+      .drawerContent-box {
+        overflow: scroll;
+        overflow-x: hidden;
+        height: 100%;
+
+        .mdc-circular-progress {
+          height: 80%;
+        }
+      }
+    }
+
+    .search-box {
+      display: flex;
+      justify-content: center;
+      width: 100%;
+
+      .lmnt-text-field {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        align-items: center;
+        margin: 0;
+        .searchIcon-box {
+          display: flex;
+          justify-content: center;
+          align-items: center;
+          .searchIcon {
+            margin: 6px;
+          }
+          .closeIcon-box {
+            margin: 0;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            .closeIcon {
+              margin: 10px;
+            }
+          }
+        }
+      }
+    }
+  }
+
+  .mdc-menu-container {
+    top: 15px !important;
+    min-height: 120px;
+  }
+
+  .crmDetails-box {
+    //visibility: hidden;
+    display: flex;
+    flex-direction: column;
+    align-content: flex-start;
+    margin-top: 100px;
+    margin-left: 20px;
+    margin-right: 20px;
+    height: 50%;
+    width: 80%;
+    justify-content: space-between;
+
+    .nav-box {
+      flex-basis: 1%;
+      margin-bottom: 30px;
+    }
+    .nameDetails-box {
+      .name-box {
+        display: flex;
+        justify-content: space-between;
+        margin-bottom: 20px;
+
+        .nameSource {
+          flex-basis: 22%;
+          white-space: nowrap;
+          .mdc-typography--subtitle1 {
+            margin: 0;
+          }
+        }
+
+        .AccClassific {
+          flex-basis: 22%;
+          white-space: nowrap;
+          margin-top: 2px;
+          .mdc-typography--headline5 {
+            margin: 5px 0;
+          }
+          .mdc-typography--subtitle1 {
+            margin: 0;
+          }
+        }
+      }
+      .mdc-layout-grid__inner {
+        .first-row {
+          min-height: 95px;
+          h4,
+          h6 {
+            margin: 0;
+          }
+          .classificSelection-box {
+            margin-top: 10px;
+          }
+        }
+        .status,
+        .address,
+        .phone {
+          h4 {
+            margin: 20px 0 0 0;
+          }
+          .mdc-typography--subtitle1 {
+            margin: 0;
+          }
+        }
+        .mdc-layout-grid__cell--span-1 {
+          position: relative;
+          h4 {
+            bottom: 0;
+            position: absolute;
+            margin: 0;
+          }
+        }
+      }
+      .crm-actionbuttons,
+      .crm-legends {
+        position: relative;
+        width: 100%;
+        min-height: 35px;
+        margin-top: 25px;
+        h4 {
+          float: right;
+          padding-right: 5%;
+          margin: 0;
+        }
+      }
+      .crm-legends {
+        margin-top: 5%;
+      }
+      .viewAllButton {
+        border-color: $velocity-primary;
+        .mdc-button__label {
+          color: $velocity-primary;
+        }
+      }
+      .saveButton {
+        display: flex;
+        justify-content: center;
+        background-color: $velocity-primary;
+        width: 120px;
+      }
+
+      .expertButton {
+        display: flex;
+        justify-content: center;
+        background-color: $velocity-primary;
+      }
+
+      .crmDetailsBar-box {
+        //display: flex;
+        //flex-basis: 10%;
+        margin-top: 35px;
+
+        .bar-box {
+          display: flex;
+          align-items: center;
+          background-color: $velocity-primary;
+          width: 100%;
+          padding: 0;
+          height: 64px;
+          margin-bottom: 1%;
+          position: relative;
+          color: $velocity-font-white;
+
+          .CRM-Details {
+            padding-left: 16px;
+          }
+          .Edit-CRM-Details {
+            padding-left: 16px;
+          }
+
+          .editCRMButton {
+            position: absolute;
+            right: 26%;
+            background-color: grey;
+            color: #222;
+            margin-right: 180px; //85px;
+          }
+          .editCRMButtonTwo {
+            position: absolute;
+            right: 26%;
+            background-color: $velocity-primary;
+            color: $velocity-font-white;
+            margin-right: 180px; //85px;
+          }
+
+          .moveCRMButton {
+            position: absolute;
+            right: 15%;
+            background-color: grey;
+            color: #222;
+            margin-right: 150px; //85px;
+          }
+          .moveCRMButtonTwo {
+            position: absolute;
+            right: 15%;
+            background-color: $velocity-primary;
+            color: $velocity-font-white;
+            margin-right: 150px; //85px;
+          }
+          .addCIButton {
+            position: absolute;
+            right: 15%;
+            background-color: grey;
+            color: #222;
+            margin-right: 85px;
+          }
+          .addCIButton-selected {
+            position: absolute;
+            right: 15%;
+            background-color: $velocity-secondary-white;
+            color: #222;
+            margin-right: 85px;
+          }
+
+          .barButton {
+            position: absolute;
+            right: 5%;
+            border-color: $velocity-secondary-white;
+            background-color: $velocity-primary;
+            .mdc-button__label {
+              color: $velocity-secondary-white;
+            }
+          }
+          .CI-search {
+            position: absolute;
+            right: 5%;
+            margin-top: 0;
+
+            .lmnt-text-field {
+              margin: 0;
+              padding: 0;
+              display: flex;
+              align-items: center;
+              background-color: $velocity-secondary-white;
+
+              .search-button {
+                padding-right: 24px;
+                .material-icons {
+                  color: $velocity-primary;
+                }
+              }
+              .close-button {
+                padding-right: 24px;
+                .material-icons {
+                  color: $velocity-primary;
+                }
+              }
+            }
+          }
+
+          .mdc-top-app-bar__section {
+            display: flex;
+            justify-content: space-between;
+
+            /*   .mdc-button {
+               width: 100%;
+               flex-basis: 70%;
+               color: $velocity-primary;
+               background: $velocity-button-white;
+            } */
+          }
+        }
+      }
+      .lmnt-modal {
+        width: 100%;
+      }
+
+      /* CI Modal Start */
+      .CIInfo {
+        margin-left: 23px;
+        margin-bottom: 23px;
+        .CIID {
+          h2 {
+            margin: 0;
+          }
+        }
+      }
+      /* CI Modal Start End*/
+
+      /* CI Modal Start */
+      .OPLInfo {
+        margin-left: 23px;
+        margin-bottom: 23px;
+        .OPLID {
+          h2 {
+            margin: 0;
+          }
+        }
+      }
+      /* CI Modal Start End*/
+
+      .ciAccID-box {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: space-between;
+        flex-basis: 1%;
+        width: 100%;
+        height: 180px;
+        overflow: auto;
+        padding-bottom: 5px;
+
+        .mdc-layout-grid {
+          margin: 0;
+          padding: 0;
+        }
+
+        .mdc-card-container {
+          width: 100%;
+          height: 100%;
+          flex-basis: 32%;
+
+          .mdc-card {
+            display: flex;
+            width: 100%;
+            height: 100%;
+          }
+        }
+        .viewSearch-box {
+          position: absolute;
+          top: 30px;
+          right: 0;
+          .mdc-menu-surface--anchor {
+            .mdc-icon-button {
+              padding: 0;
+            }
+            .mdc-list {
+              width: 250px;
+            }
+          }
+        }
+        /* ci-search-result start*/
+        .ci-search-result {
+          margin-left: 0;
+          .mdc-card {
+            display: flex;
+            width: 100%;
+            height: 100%;
+          }
+          .mdc-card-header {
+            background-color: $velocity-primary;
+            color: $velocity-font-white;
+            .mdc-card-header-text {
+              height: auto;
+              display: flex;
+              justify-content: center;
+              .title-box {
+                display: flex;
+                .title {
+                  display: flex;
+                  flex-direction: column;
+                }
+                .mdc-form-field {
+                  width: 10%;
+                  margin-left: 50px;
+                  .CI-checkbox {
+                    .mdc-checkbox__background {
+                      border-color: $velocity-secondary-white;
+                    }
+                    .mdc-input-label {
+                      display: none;
+                    }
+                  }
+                }
+              }
+
+              .viewSearch-box {
+                margin-top: 16px;
+                padding: 0;
+                display: flex;
+                align-items: center;
+
+                .mdc-menu-surface--anchor {
+                  margin: 0;
+                  padding: 0;
+                  display: flex;
+                  align-items: center;
+
+                  .mdc-icon-button {
+                    display: flex;
+                    flex-direction: column;
+                    align-items: center;
+                    margin: 0;
+                    padding: 0;
+                  }
+                  .mdc-list {
+                    width: 250px;
+                  }
+                }
+              }
+              h4 {
+                margin: 0;
+              }
+            }
+          }
+
+          .opl-container {
+            h4 {
+              margin: 10px 0 0 0;
+            }
+            .mdc-typography--subtitle1 {
+              margin: 0;
+            }
+          }
+        }
+        /* ci-search-result end*/
+
+        .searchci-error {
+          position: absolute;
+          text-align: center;
+          width: 70%;
+        }
+
+        /* CI-card start */
+        .mdc-card-header {
+          background-color: $velocity-primary;
+          color: $velocity-font-white;
+          .mdc-card-header-text {
+            height: auto;
+            .mdc-menu-surface--anchor {
+              .mdc-icon-button {
+                padding: 0;
+                margin-top: -40px;
+              }
+              .mdc-list {
+                width: 250px;
+              }
+              position: absolute;
+              right: 0;
+            }
+            h4 {
+              margin: 0;
+            }
+          }
+        }
+
+        .opl-container {
+          h4 {
+            margin: 10px 0 0 0;
+          }
+          .mdc-typography--subtitle1 {
+            margin: 0;
+          }
+        }
+        /* CI-card end */
+      }
+    }
+  }
+}
